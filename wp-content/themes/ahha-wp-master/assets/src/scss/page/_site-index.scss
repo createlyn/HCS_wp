@@ -1,0 +1,94 @@
+// Variables
+
+$hero-image: url('../../../assets/dist/img/chicken.jpg') no-repeat center 50%;
+
+
+
+
+// Structure
+.hero__image {
+  background: $hero-image;
+  background-size: cover;
+  height: 200px;
+  position: relative;
+
+  @include media($medium) {
+    height: 250px;
+  }
+
+  h1 {
+    @include center;
+  }
+}
+
+.image__section {
+  // background-color: $green-base;
+}
+
+.image-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  &__item {
+    height: 150px;
+    width: 150px;
+    background-color: $red-base;
+    overflow: hidden;
+  }
+
+  &__image {
+    max-width: 150px;
+    max-height: 150px;
+  }
+}
+
+
+.blog__section {
+  color: $white-base;
+  margin: 0 0 0;
+
+   h3, p, a {
+    color: $white-base;
+  }
+}
+
+.blog__preview {
+  margin: auto;
+  padding: 0;
+  display: block;
+}
+
+.blog__preview-item {
+  // list-style: none;
+  margin-top: $spacer-bravo;
+  border-bottom: 1px solid $white-base;
+
+  @include media($medium) {
+    display: inline-block;
+    border: none;
+  }
+}
+
+.blog__image {
+  display: none;
+
+  @include media($medium){
+    height: 200px;
+    width: 220px;
+    background-color: $green-base;
+    display: block;
+    margin: $spacer-echo 0;
+  }
+}
+
+.blog__preview-content {
+  margin-bottom: $spacer-alpha;
+}
+
+.blog__view-more {
+  @extend .text--bold;
+  float: right;
+  text-transform: $text-transform-uppercase;
+}
