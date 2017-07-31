@@ -2,12 +2,12 @@
 
 	<main role="main">
 	<!-- section -->
-	<section>
+	<section class="container padding-top--alpha margin-bottom--mega">
 
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 		<!-- article -->
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<article class="columns-4__s columns-7__m offset__1 columns-6__l offset-3__l" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 			<!-- post thumbnail -->
 			<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
@@ -28,9 +28,8 @@
 				<time datetime="<?php the_time('Y-m-d'); ?> <?php the_time('H:i'); ?>">
 					<?php the_date(); ?> <?php the_time(); ?>
 				</time>
-			</span>
+			</span><br>
 			<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-			<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
 			<!-- /post details -->
 
 			<?php the_content(); // Dynamic Content ?>
@@ -65,7 +64,5 @@
 	</section>
 	<!-- /section -->
 	</main>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
