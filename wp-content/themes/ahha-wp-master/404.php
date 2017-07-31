@@ -2,15 +2,15 @@
 
 	<main role="main">
 		<!-- section -->
-		<section>
+		<section class="padding-top--giga padding-bottom--giga text--center background--purple">
 
 			<!-- article -->
 			<article id="post-404">
 
-				<h1><?php _e( 'Page not found', 'html5blank' ); ?></h1>
-				<h2>
+				<h2 class="text--white"><?php _e( 'No Chicken Here!', 'html5blank' ); ?></h2>
+				<h4>
 					<a href="<?php echo home_url(); ?>"><?php _e( 'Return home?', 'html5blank' ); ?></a>
-				</h2>
+				</h4>
 
 			</article>
 			<!-- /article -->
@@ -18,7 +18,5 @@
 		</section>
 		<!-- /section -->
 	</main>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

@@ -15,64 +15,58 @@
     <section class="page__section image__section">
       <ul class="image-list">
         <li class="image-list__item">
-          <img src="assets/src/img/images-cake.png" class="image-list__image" >
+          <img src="<?php bloginfo('template_url'); ?>/assets/src/img/images-cake.png" class="image-list__image" >
         </li>
         <li class="image-list__item">
-          <img src="assets/src/img/images-cake.png" class="image-list__image" >
+          <img src="<?php bloginfo('template_url'); ?>/assets/src/img/images-cake.png" class="image-list__image" >
         </li>
         <li class="image-list__item">
-          <img src="assets/src/img/images-cake.png" class="image-list__image" >
+          <img src="<?php bloginfo('template_url'); ?>/assets/src/img/images-cake.png" class="image-list__image" >
         </li>
         <li class="image-list__item">
-          <img src="assets/src/img/images-cake.png" class="image-list__image" >
+          <img src="<?php bloginfo('template_url'); ?>/assets/src/img/images-cake.png" class="image-list__image" >
         </li>
         <li class="image-list__item">
-          <img src="assets/src/img/images-cake.png" class="image-list__image" >
+          <img src="<?php bloginfo('template_url'); ?>/assets/src/img/images-cake.png" class="image-list__image" >
         </li>
         <li class="image-list__item">
-          <img src="assets/src/img/images-cake.png" class="image-list__image" >
+          <img src="<?php bloginfo('template_url'); ?>/assets/src/img/images-cake.png" class="image-list__image" >
         </li>
       </ul>
     </section>
-    <section class="page__section blog__section background--purple margin-bottom--reset">
+    <section class="page__section blog__section background--purple margin-bottom--reset padding-top--mega padding-bottom--mega">
       <header class="blog__header text--center">
         <h1><?php _e( 'Talk Chicken', 'html5blank' ); ?></h1>
         <a href="<?php bloginfo('url'); ?>/blog" class="button--secondary">View all blog posts</a>
       </header>
-      <div class="container">
-      <?php get_template_part('partials/loop'); ?>
-
-      <?php get_template_part('partials/pagination'); ?>
+       <?php query_posts('post_type=post&post_status=publish&posts_per_page=9&paged='. get_query_var('paged')); ?>
+      <div class="container padding-top--alpha">
         <div class="row">
-          <ul class="blog__preview columns-4__s columns-9__m">
-            <li class="blog__preview-item columns-4__s columns-3__m"">
-              <img src="assets/src/img/blog-meal.png" class="blog__image" >
-              <div class="blog__preview-content">
-                <h3>Blog title here</h3>
-                <p>Integer consequat auctor metus et volutpat. Ut vitae nisi metus. Quisque luctus congue mattis. Ut vitae nisi metus. Quisque luctus congue mattis.</p>
-                <a href="#" class="button--secondary">read more</a>
-              </div>
-            </li>
-            <li class="blog__preview-item columns-4__s columns-3__m">
-              <img src="assets/src/img/blog-meal.png" class="blog__image" >
-              <div class="blog__preview-content">
-                <h3>Blog title here</h3>
-                <p>Integer consequat auctor metus et volutpat. Ut vitae nisi metus. Quisque luctus congue mattis.Ut vitae nisi metus. Quisque luctus congue mattis.</p>
-                <a href="#" class="button--secondary">read more</a>
-              </div>
-            </li>
-            <li class="blog__preview-item columns-4__s columns-3__m">
-              <img src="assets/src/img/blog-meal.png" class="blog__image" >
-              <div class="blog__preview-content">
-                <h3>Blog title here</h3>
-                <p>Integer consequat auctor metus et volutpat. Ut vitae nisi metus. Quisque luctus congue mattis. Ut vitae nisi metus. Quisque luctus congue mattis.</p>
-                <a href="#" class="button--secondary">read more</a>
-              </div>
-            </li>
-          </ul>
+          <ul class="blog__preview columns-4__s columns-9__m columns-10__l offset-1__l">
+          <?php if (have_posts()) :
+              while (have_posts()) : the_post(); ?>
+          <li class="blog__preview-item columns-4__s columns-3__m"">
+            <div id="post-thumbnails">
+              <p><?php the_post_thumbnail('thumbnail');  ?></p>
+              <a href="<?php the_permalink(); ?>">
+                <h3 class="text--white"><?php the_title(); ?></h3>
+              </a>
+              <p><?php the_excerpt();  ?></p>
+            </div>
+                <?php
+            endwhile;?>
+          </li>
+        </ul>
+            <!-- Navigation -->
+        <div class="navigation">
+            <?php the_posts_pagination( array( 'mid_size' => 10 ) ); ?>
+            <?php    endif; ?>
+        </div>
+
+
           </div>
           <div class="row">
-            <a href="#" class="blog__view-more">view all > </a>
+            <a href="<?php bloginfo('url'); ?>/blog" class="blog__view-more">view all > </a>
           </div>
         </div>
       </div>

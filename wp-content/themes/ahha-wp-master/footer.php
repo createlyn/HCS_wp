@@ -3,16 +3,16 @@
         <div class="footer__connect text--center">
           <h3>connect with us</h3>
           <div class="footer--social">
-            <a href="http://facebook.com" class="footer--social__item">
+            <a href="http://facebook.com" class="footer--social__item" target="_blank">
               <img src="<?php bloginfo('template_url'); ?>/assets/src/img/social-facebook.svg" alt="Harold's Chicken Shack Facebook">
             </a>
-            <a href="http://instagram.com" class="footer--social__item">
+            <a href="http://instagram.com" class="footer--social__item" target="_blank">
               <img src="<?php bloginfo('template_url'); ?>/assets/src/img/social-instagram.svg" alt="Harold's Chicken Shack Facebook">
             </a>
-            <a href="http://twitter.com" class="footer--social__item">
+            <a href="http://twitter.com" class="footer--social__item" target="_blank">
               <img src="<?php bloginfo('template_url'); ?>/assets/src/img/social-twitter.svg" alt="Harold's Chicken Shack Facebook">
             </a>
-            <a href="mailto:caitlyn.zahn@gmail.com" class="footer--social__item">
+            <a href="mailto:caitlyn.zahn@gmail.com" class="footer--social__item" target="_blank">
               <img src="<?php bloginfo('template_url'); ?>/assets/src/img/social-email.svg" alt="Harold's Chicken Shack Facebook">
             </a>
           </div>
