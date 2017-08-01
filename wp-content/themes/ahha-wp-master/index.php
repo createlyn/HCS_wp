@@ -15,22 +15,22 @@
     <section class="page__section image__section">
       <ul class="image-list">
         <li class="image-list__item">
-          <img src="<?php bloginfo('template_url'); ?>/assets/src/img/images-cake.png" class="image-list__image" >
+          <img src="<?php bloginfo('template_url'); ?>/assets/src/img/chicken-1.png" class="image-list__image" >
         </li>
         <li class="image-list__item">
-          <img src="<?php bloginfo('template_url'); ?>/assets/src/img/images-cake.png" class="image-list__image" >
+          <img src="<?php bloginfo('template_url'); ?>/assets/src/img/chicken-2.png" class="image-list__image" >
         </li>
         <li class="image-list__item">
-          <img src="<?php bloginfo('template_url'); ?>/assets/src/img/images-cake.png" class="image-list__image" >
+          <img src="<?php bloginfo('template_url'); ?>/assets/src/img/chicken-3.png" class="image-list__image" >
         </li>
         <li class="image-list__item">
-          <img src="<?php bloginfo('template_url'); ?>/assets/src/img/images-cake.png" class="image-list__image" >
+          <img src="<?php bloginfo('template_url'); ?>/assets/src/img/chicken-4.png" class="image-list__image" >
         </li>
         <li class="image-list__item">
-          <img src="<?php bloginfo('template_url'); ?>/assets/src/img/images-cake.png" class="image-list__image" >
+          <img src="<?php bloginfo('template_url'); ?>/assets/src/img/chicken-5.png" class="image-list__image" >
         </li>
         <li class="image-list__item">
-          <img src="<?php bloginfo('template_url'); ?>/assets/src/img/images-cake.png" class="image-list__image" >
+          <img src="<?php bloginfo('template_url'); ?>/assets/src/img/chicken-6.png" class="image-list__image" >
         </li>
       </ul>
     </section>

@@ -34,7 +34,7 @@ $display-inline-block: inline-block;
 }
 
 .mobile-navigation__trigger {
-  padding: $spacer-echo $spacer-hotel;
+  padding: $spacer-echo $spacer-hotel 0px;
   float: right;
   display: inline-block;
 
